@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "httpapi_msg.proto";
+
+package httpapi;
+
+service HttpApi {
+  rpc DoRequest(stream HttpApiRequest) returns (stream HttpApiResponse) {}
+}
